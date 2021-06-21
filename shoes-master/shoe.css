@@ -1,0 +1,212 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+:root {
+    /*----primaycolor-----*/
+
+    --gray: #333;
+    --btncolor: yellow;
+    --spacing: 2rem;
+}
+
+body {
+    font-family: Montserrat;
+    line-height: 1.6;
+}
+
+/*==header==*/
+
+.hero {
+    height: 100%;
+    width: 100%;
+    background: url(img/shoe-.png);
+}
+img {
+    max-width: 100%;
+    display: block;
+}
+
+.container {
+    width: 85%;
+    margin: 0 auto;
+    max-width: 65rem;
+}
+
+
+.split {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2em;
+    justify-content: center;
+ 
+         
+}
+
+.split > * {
+    flex-basis: 30%;
+    min-width: 15em;
+}
+
+
+.spacing > * + * {
+    margin-top: var(--spacing, 1.5rem)
+}
+
+.btn {
+    display: inline-block;
+    text-decoration: none;
+    padding: .5rem 1.25rem;
+    background-color: var(--btn-color, blue);
+    color: #fff;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    border-radius: .5rem;
+    transition: 
+    transform 250ms ease-in-out
+    opacity 275ms linear;
+}
+
+.btn:hover,
+.btn:focus {
+    transform: scale(1.1);
+    opacity: .5;
+}
+
+.main-text {
+       font-size: 4rem;
+       line-height: 1;
+       font-size: clamp(3rem, calc(5vw + 1rem), 4.5rem);
+       text-transform: uppercase;
+}
+
+
+.hero {
+    text-align: center;
+    padding: 15em 0;
+    /* background-image: url(img/shoe-3.png), */
+    /* radial-gradient(#444, #111); */
+    background-image: url(img/shoe-3.png),
+    radial-gradient(#444, #111);
+    background-blend-mode: multiply;
+    color: #fff;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center;
+    /* background-color: #222; */
+
+/*   
+    @support(background-blend-mode: multiply) {
+        background-image: url(img/shoe-3.png),
+        radial-gradient(#444, #111);
+        background-blend-mode: multiply;
+    } */
+    
+}
+
+.section-title {
+    text-align: center;
+    font-size: clamp(2.5rem , calc(5vw + 1rem), 3rem);
+     text-transform: capitalize; 
+    line-height: 1;
+    color : #17353d;
+    font-weight: bold;
+    margin-bottom: 5rem;
+}
+
+section {
+    padding : 7rem 0;
+}
+
+.feature {
+    background: #eee;
+}
+.feature-item {
+    color: #333;
+    position: relative;
+    transform: scale(.85);
+    transition: transform .5s ease;
+    text-decoration: none;
+    text-align: center;
+}
+
+.span {
+    display: block;
+    font-weight: 900;
+    font-size: 2.5rem;
+}
+
+.feature-item:hover .feature-detail,
+.feature-item:focus .feature-detail{
+    opacity: 1;
+}
+
+.feature-item:hover,
+.feature-item:focus {
+    transform: scale(1)
+}
+
+ .feature-detail {
+    opacity: 0;
+    transition: opacity 250ms linear;
+} 
+
+.feature-item::before {
+    content: "";
+    top: 10%;
+    left: 10%;
+    z-index: -1;
+    position: absolute;
+    padding: 80% 80% 0 0;
+    background: #2193b0;
+    border-radius: 50%;
+}
+
+/* products */
+
+.product {
+    background: radial-gradient( purple, green);
+    border-radius: 20px;
+    padding: 3rem;
+    text-align: center;
+    margin-bottom: 5em;
+}
+
+.product_title {
+    font-size: 2rem;
+    color: #fff;
+    /* text-shadow: 0 0 .2em ; */
+    line-height: 1;
+    text-transform: capitalize;
+}
+
+.product-img {
+    margin-top: -6rem;
+}
+
+.shoe-red {
+    --clr-color: red;
+    --clr-color: orange;
+    --clr-ascent: limegreen;
+}
+
+@media (min-width: 45em) {
+    .product-img {
+        float: right;
+        width: 50%;
+        /* outline: 2px solid red; */
+        shape-outside: url(img/shoe-1.png);
+        shape-margin: 2rem;
+    }
+
+    .product {
+        text-align: left;
+    }
+}
